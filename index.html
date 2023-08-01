@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/7e09908c25.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "hero-pattern": "url('img/hero-pattern.png')",
+              "contact-pattern": "url('img/contact-pattern.avif')",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Document</title>
+  </head>
+  <body class="bg-slate-100">
+    <!-- navigation -->
+    <header class="">
+      <nav
+        class="flex items-center justify-between flex-wrap bg-white shadow-md p-3 fixed w-full m-auto z-10 top-0 pin-t"
+      >
+        <div class="flex items-center flex-shrink-0 text-black mr-8 ml-6">
+          <img src="img/logo-1.png" class="w-24 h-10" href="#" />
+        </div>
+
+        <div class="block lg:hidden">
+          <button
+            id="nav-toggle"
+            class="flex items-center mr-6 px-3 py-2 border rounded text-black border-gray-600 hover:text-white hover:border-black"
+          >
+            <svg
+              class="gray-400 h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="w-full mr-6 flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-6">
+              <a
+                href="#home"
+                class="inline-block py-2 px-2 text-black no-underline hover:text-blue-300"
+                >Home</a
+              >
+            </li>
+            <li class="mr-6">
+              <a
+                href="#about"
+                class="inline-block py-2 px-2 text-black no-underline hover:text-blue-300"
+                >About</a
+              >
+            </li>
+            <li class="mr-6">
+              <a
+                class="inline-block py-2 px-2 text-black no-underline hover:text-blue-300"
+                href="#skill"
+                >Skills</a
+              >
+            </li>
+            <li class="mr-6">
+              <a
+                class="inline-block py-2 px-2 text-black no-underline hover:text-blue-300"
+                href="#project"
+                >Project</a
+              >
+            </li>
+
+            <li class="mr-6">
+              <a
+                class="inline-block py-2 px-2 text-black no-underline hover:text-blue-300"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- home -->
+    <section
+      id="home"
+      class="w-screen h-screen bg-[url('img/hero-pattern.png')] lg:overflow-hidden mt-10 lg:mt-0"
+    >
+      <div
+        class="grid lg:grid-cols-2 grid-cols-1 justify-items-center items-center w-[87%] m-auto items-center lg:mt-[7rem] mt-[5rem]"
+      >
+        <!-- introduction -->
+        <div
+          class="hero-info md:pb-0 lg:max-w-[32rem] lg:text-left text-center order-last lg:order-first"
+        >
+          <h1 class="text-4xl lg:text-5xl">
+            Hi, I&apos;m <span class="text-violet-600">Alice </span>
+            <br />
+            <span class="text-2xl"> Frontend Developer </span>
+          </h1>
+
+          <p class="py-2">
+            A Frontend Software Engineer, structuring and building the
+            client-side websites and Web Applications
+          </p>
+          <!-- social icons -->
+
+          <div class="flex py-4 justify-center lg:justify-start">
+            <ul class="flex">
+              <li>
+                <a
+                  href="https://twitter.com/AliceOyekale"
+                  target="_blank"
+                  class="h-10 w-10 rounded-full hover:bg-[#34A1CD] flex items-center justify-center cursor-pointer"
+                >
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://github.com/Alice2212"
+                  target="_blank"
+                  class="h-10 w-10 rounded-full hover:bg-[#34A1CD] flex items-center justify-center cursor-pointer"
+                >
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https:linkedin.com/in/oyekalealice"
+                  target="_blank"
+                  class="h-10 w-10 rounded-full hover:bg-[#34A1CD] flex items-center justify-center cursor-pointer"
+                >
+                  <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- cv link -->
+          <div>
+            <button
+              class="inline-block shrink-0 rounded-md border border-[#34A1CD] bg-[#34A1CD] px-20 py-2 lg:mb-0 mb-2 lg:py-3 font-medium text-white transition hover:opacity-80 focus:outline-none focus:ring active:text-purple-600"
+            >
+              <a
+                href="https://drive.google.com/file/d/1YblmMDW4tZs6tKt_V1DVDPaaOYvwmEe3/view?usp=share_link"
+                target="_blank"
+              >
+                Download CV &nbsp; <i class="fa fa-arrow-down"></i>
+              </a>
+            </button>
+          </div>
+        </div>
+        <!-- image -->
+        <div
+          class="about-img lg:pt-0 pt-8 order-first lg:order-last lg:pb-0 pb-12"
+        >
+          <img
+            src="/img/alice.jpg"
+            alt="alice image"
+            class="md:ml-auto rounded-full w-[400px] h-[400px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- about section -->
+    <section id="about" class="text-black lg:pt-24 pt-0 min-h-[100vh]">
+      <div class="w-[87%] mx-auto">
+        <h2
+          class="text-4xl font-bold mb-5 border-b-[5px] w-[180px] border-[#34A1CD] pb-2 text-center lg:text-left"
+        >
+          About Me
+        </h2>
+        <div
+          class="about-info flex flex-wrap items-center justify-center md:justify-between"
+        >
+          <div class="lg:w-6/12 w-full order-last lg:order-first">
+            <p class="pb-5 pt-8">
+              Hi, My Name Is Oyekale Oluwatosin Alice. I am a Frontend
+              Developer.
+            </p>
+
+            <p class="pb-5">
+              I am proficient in Frontend skills like HTML, CSS, Javascript and
+              Tailwind CSS.
+            </p>
+
+            <p>
+              In my wind down time I listen to music, hangout and surf the net .
+            </p>
+          </div>
+
+          <div
+            class="about-img lg:pt-0 pt-8 order-first lg:order-last lg:pb-0 pb-12"
+          >
+            <img
+              src="/img/about.png"
+              alt="coding illustration"
+              class="md:ml-auto rounded-full w-[400px] h-[400px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section -->
+    <section class="text-black pt-24 min-h-[100vh]" id="skill">
+      <div class="w-[87%] mx-auto">
+        <h2
+          class="text-4xl font-bold mb-5 border-b-[5px] w-[100px] border-[#34A1CD] pb-2 lg:pt-16 pt-0 text-left"
+        >
+          Skills
+        </h2>
+        <!-- skill img  -->
+        <div
+          class="flex flex-col mx-auto text-center justify-center items-center"
+        >
+          <h2 class="pb-8">I have experience with these technologies</h2>
+
+          <div
+            class="flex flex-wrap flex-row gap-8 mx-auto justify-center lg:gap-6 lg:gap-y-8 gap-y-8"
+          >
+            <img
+              src="/img/html5.svg"
+              alt="coding illustration"
+              class="shadow-lg shadow-cyan-500/50 w-[100px] h-[100px] p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-slate-100"
+            />
+            <img
+              src="/img/css3.svg"
+              alt="coding illustration"
+              class="shadow-lg shadow-cyan-500/50 w-[100px] h-[100px] p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-slate-50"
+            />
+
+            <img
+              src="/img/bootstrap.svg"
+              alt="coding illustration"
+              class="shadow-lg shadow-cyan-500/50 w-[100px] h-[100px] p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-slate-50"
+            />
+            <img
+              src="/img/javascript.svg"
+              alt="coding illustration"
+              class="shadow-lg shadow-cyan-500/50 w-[100px] h-[100px] p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-slate-50"
+            />
+
+            <img
+              src="/img/github.svg"
+              alt="coding illustration"
+              class="shadow-lg shadow-cyan-500/50 w-[100px] h-[100px] p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-slate-50"
+            />
+            <img
+              src="/img/tailwind.svg"
+              alt="coding illustration"
+              class="shadow-lg shadow-cyan-500/50 w-[100px] h-[100px] p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-slate-50"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project section -->
+    <section class="text-black lg:pt-[60px] pt-0 min-h-[100vh]" id="project">
+      <div class="w-[87%] mx-auto">
+        <h2
+          class="text-4xl font-bold mb-8 border-b-[5px] w-[150px] border-[#34A1CD] pb-2 text-center lg:text-left"
+        >
+          Projects
+        </h2>
+
+        <div class="flex flex-col justify-center items-center mx-auto mt-10">
+          <div
+            class="grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-1 gap-8 mx-auto"
+          >
+            <!-- card 1 -->
+
+            <div
+              class="w-full mx-auto shadow-lg shadow-cyan-500/50 p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              <div class="relative flex items-center justify-center">
+                <img
+                  src="/img/advice.png"
+                  alt="weather landing page"
+                  class="pb-6 w-[600px] h-[300px]"
+                />
+              </div>
+              <div class="text-center">
+                <p class="text-[14px] py-2">
+                  A responsive app that generate random quotes of advice built
+                  with HTML5, CSS, Javascript and an API
+                </p>
+                <div
+                  class="flex flex-wrap justify-center items-center text-center gap-y-2 gap-5 lg:gap-2 mx-auto"
+                >
+                  <span
+                    class="border-2 border-solid border-[#34A1CD] px-6 p4-2 hover:bg-[#34A1CD] hover:text-[#ffffff] cursor-pointer"
+                  >
+                    <a
+                      href="https://generate-advice-application.netlify.app/"
+                      target="_blank"
+                    >
+                      live Demo
+                    </a>
+                  </span>
+                  <span
+                    class="border-2 border-solid border-[#34A1CD] px-6 p4-2 hover:bg-[#34A1CD] hover:text-[#ffffff] cursor-pointer"
+                  >
+                    <a
+                      href="https://github.com/Alice2212/Advice-generator-app.git"
+                      target="_blank"
+                    >
+                      Github
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+              class="w-full mx-auto shadow-lg shadow-cyan-500/50 p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              <div class="relative flex items-center justify-center">
+                <img
+                  src="/img/url-app.png"
+                  alt="url shortener landing page"
+                  class="pb-6 w-[600px] h-[300px]"
+                />
+              </div>
+              <div class="text-center">
+                <p class="text-[14px] py-2">
+                  A responsive landing page for url shortener
+                </p>
+                <div
+                  class="flex flex-wrap justify-center items-center text-center gap-y-2 gap-5 lg:gap-2 mx-auto"
+                >
+                  <span
+                    class="border-2 border-solid border-[#34A1CD] px-6 p4-2 hover:bg-[#34A1CD] hover:text-[#ffffff] cursor-pointer"
+                  >
+                    <a
+                      href="https://url-shortly-application.netlify.app/"
+                      target="_blank"
+                    >
+                      live Demo
+                    </a>
+                  </span>
+                  <span
+                    class="border-2 border-solid border-[#34A1CD] px-6 p4-2 hover:bg-[#34A1CD] hover:text-[#ffffff] cursor-pointer"
+                  >
+                    <a
+                      href="https://github.com/Alice2212/Url_Shortly"
+                      target="_blank"
+                    >
+                      Github
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+              class="w-full mx-auto shadow-lg shadow-cyan-500/50 p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              <div class="relative flex items-center justify-center">
+                <img
+                  src="/img/hotel.png"
+                  alt="An hotel landing page"
+                  class="pb-6 w-[600px] h-[300px]"
+                />
+              </div>
+              <div class="text-center">
+                <p class="text-[14px] py-2">
+                  A responsive landing page for hotel website
+                </p>
+                <div
+                  class="flex flex-wrap justify-center items-center text-center gap-y-2 gap-5 lg:gap-2 mx-auto"
+                >
+                  <span
+                    class="border-2 border-solid border-[#34A1CD] px-6 p4-2 hover:bg-[#34A1CD] hover:text-[#ffffff] cursor-pointer"
+                  >
+                    <a
+                      href="https://hotel-website-alice2212.vercel.app/"
+                      target="_blank"
+                    >
+                      live Demo
+                    </a>
+                  </span>
+                  <span
+                    class="border-2 border-solid border-[#34A1CD] px-6 p4-2 hover:bg-[#34A1CD] hover:text-[#ffffff] cursor-pointer"
+                  >
+                    <a
+                      href="https://github.com/Alice2212/hotel-website"
+                      target="_blank"
+                    >
+                      Github
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact page section -->
+    <section
+      class="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-[url('img/contact-pattern.avif')] text-gray-900 rounded-lg shadow-lg"
+    >
+      <div class="flex flex-col justify-between">
+        <div>
+          <h2 class="text-4xl lg:text-5xl font-bold leading-tight">
+            Lets talk about everything!
+          </h2>
+          <div class="text-black mt-8">I will love to hear from you</div>
+        </div>
+      </div>
+      <div class="">
+        <div>
+          <span class="uppercase text-sm text-black font-bold">Full Name</span>
+          <input
+            class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="text"
+            placeholder=""
+          />
+        </div>
+        <div class="mt-8">
+          <span class="uppercase text-sm text-black font-bold">Email</span>
+          <input
+            class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="text"
+          />
+        </div>
+        <div class="mt-8">
+          <span class="uppercase text-sm text-black font-bold">Message</span>
+          <textarea
+            class="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+          ></textarea>
+        </div>
+        <div class="mt-8">
+          <button
+            class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:opacity-80"
+          >
+            Send Message
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById("nav-toggle").onclick = function () {
+        document.getElementById("nav-content").classList.toggle("hidden");
+      };
+    </script>
+  </body>
+</html>
